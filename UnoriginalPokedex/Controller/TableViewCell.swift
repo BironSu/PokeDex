@@ -13,6 +13,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var labelOne: UILabel!
     @IBOutlet weak var labelTwo: UILabel!
     @IBOutlet weak var pokeImageView: UIImageView!
+    @IBOutlet weak var pokeCellImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
     }
