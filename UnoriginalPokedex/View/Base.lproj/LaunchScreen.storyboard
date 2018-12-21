@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,14 +14,14 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokedexFront.png" translatesAutoresizingMaskIntoConstraints="NO" id="E0c-PT-8HD">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PokemonTitle.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z3k-Ar-LRk">
-                                <rect key="frame" x="30" y="260" width="315" height="167"/>
+                                <rect key="frame" x="30" y="304" width="354" height="298"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -29,9 +29,9 @@
                             <constraint firstItem="E0c-PT-8HD" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="8ct-OC-UqG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z3k-Ar-LRk" secondAttribute="trailing" constant="30" id="GK9-P1-faa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E0c-PT-8HD" secondAttribute="trailing" id="W0l-rN-KV6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z3k-Ar-LRk" secondAttribute="bottom" constant="240" id="Wgk-2v-Fje"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z3k-Ar-LRk" secondAttribute="bottom" constant="260" id="Wgk-2v-Fje"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="E0c-PT-8HD" secondAttribute="bottom" id="ccP-fL-1qd"/>
-                            <constraint firstItem="Z3k-Ar-LRk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="240" id="dqP-pN-jbb"/>
+                            <constraint firstItem="Z3k-Ar-LRk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="260" id="dqP-pN-jbb"/>
                             <constraint firstItem="E0c-PT-8HD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iYh-7E-Pk5"/>
                             <constraint firstItem="Z3k-Ar-LRk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="nvP-V3-x4G"/>
                         </constraints>
@@ -45,6 +45,6 @@
     </scenes>
     <resources>
         <image name="PokemonTitle.png" width="355" height="232"/>
-        <image name="pokedexFront.png" width="168" height="300"/>
+        <image name="pokedexFront.png" width="1000" height="2000"/>
     </resources>
 </document>

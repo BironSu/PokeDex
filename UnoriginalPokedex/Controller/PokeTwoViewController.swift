@@ -17,6 +17,11 @@ class PokeTwoViewController: UIViewController {
     @IBOutlet weak var abilityTwo: UILabel!
     @IBOutlet weak var abilityThree: UILabel!
     @IBOutlet weak var dismissButton: UIButton!
+    
+    @IBOutlet weak var pokeBackground: UIImageView!
+    @IBOutlet weak var pokeDetail: UITextView!
+    @IBOutlet weak var pokeDexNum: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let pokeData = pokeData {
@@ -58,6 +63,7 @@ class PokeTwoViewController: UIViewController {
                         self.pokeImage.image = UIImage(named: "Pokeball-PNG-High-Quality-Image")
                     }
                 }
+                
             }
         }
     }
