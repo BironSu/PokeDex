@@ -82,7 +82,7 @@ extension PokeOneViewController: UITableViewDelegate {
                             print("Error at imageHelper \(error)")
                         } else if let image = image {
                             cell.pokeImageView.image = image
-                            Timer.scheduledTimer(timeInterval: 1.25, target: self, selector: #selector(self.pokeSegue), userInfo: pokemon, repeats: false)
+                            Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.pokeSegue), userInfo: pokemon, repeats: false)
                         }
                     }
                 }

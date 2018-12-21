@@ -9,29 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UnoriginalPokedex/NetworkServices/PokemonAPIClient.swift"
-            timestampString = "566946766.458966"
+            filePath = "UnoriginalPokedex/Controller/PokeTwoViewController.swift"
+            timestampString = "567053974.516462"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "getPokeInfo(keyword:completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UnoriginalPokedex/NetworkServices/PokemonAPIClient.swift"
-            timestampString = "566946766.459277"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "getPokeInfo(keyword:completionHandler:)"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "getPokeInfo(data:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

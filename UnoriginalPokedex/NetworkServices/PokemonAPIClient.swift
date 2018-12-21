@@ -59,3 +59,26 @@ final class PokemonInfoAPIClient {
         }.resume()
     }
 }
+final class PokemonDetailAPIClient {
+    static func getPokeDetail (keyword: String, completionHandler: @escaping(Error?, TextEntries?) -> Void) {
+        let urlString = "https://pokeapi.co/api/v2/pokemon-species/\(keyword)/"
+        
+        guard let url = URL(string: urlString) else {
+            print("Bad URL: \(urlString)")
+            return
+        }
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                completionHandler(error, nil)
+            } else if let data = data {
+                do {
+                    let pokeDetail = try JSONDecoder().decode(TextEntries.self, from: data)
+                    
+                    completionHandler(nil, pokeDetail)
+                } catch {
+                    completionHandler(error, nil)
+                }
+            }
+        }.resume()
+    }
+}

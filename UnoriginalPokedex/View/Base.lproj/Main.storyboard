@@ -146,8 +146,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKF-ak-H55">
-                                <rect key="frame" x="10" y="54" width="394" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKF-ak-H55">
+                                <rect key="frame" x="246" y="54" width="168" height="30"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -185,7 +185,7 @@
                             <constraint firstItem="e6l-HE-LYX" firstAttribute="top" secondItem="EF0-7c-PkQ" secondAttribute="top" id="Rg9-au-bR9"/>
                             <constraint firstItem="lDJ-IL-Cn3" firstAttribute="height" secondItem="coD-bx-h2R" secondAttribute="height" id="VjX-QX-Bqt"/>
                             <constraint firstItem="BMM-uS-Yw0" firstAttribute="leading" secondItem="EF0-7c-PkQ" secondAttribute="leading" constant="45" id="XtO-gK-ixv"/>
-                            <constraint firstItem="EF0-7c-PkQ" firstAttribute="trailing" secondItem="eKF-ak-H55" secondAttribute="trailing" constant="10" id="YRF-fS-vbK"/>
+                            <constraint firstItem="EF0-7c-PkQ" firstAttribute="trailing" secondItem="eKF-ak-H55" secondAttribute="trailing" id="YRF-fS-vbK"/>
                             <constraint firstItem="FBi-zg-BS1" firstAttribute="leading" secondItem="EF0-7c-PkQ" secondAttribute="leading" constant="11" id="cg8-Yb-4fK"/>
                             <constraint firstItem="EF0-7c-PkQ" firstAttribute="trailing" secondItem="GAM-kV-xKs" secondAttribute="trailing" constant="11" id="dMx-zO-rtd"/>
                             <constraint firstItem="wQz-yg-jZw" firstAttribute="centerX" secondItem="EF0-7c-PkQ" secondAttribute="centerX" id="eqY-dj-Moc"/>
@@ -194,7 +194,7 @@
                             <constraint firstItem="lDJ-IL-Cn3" firstAttribute="width" secondItem="coD-bx-h2R" secondAttribute="width" id="kou-R1-zg0"/>
                             <constraint firstItem="wQz-yg-jZw" firstAttribute="width" secondItem="coD-bx-h2R" secondAttribute="width" multiplier="0.8" id="oAL-lS-quJ"/>
                             <constraint firstItem="GAM-kV-xKs" firstAttribute="top" secondItem="eKF-ak-H55" secondAttribute="bottom" constant="10" id="pBJ-pd-fgP"/>
-                            <constraint firstItem="eKF-ak-H55" firstAttribute="leading" secondItem="EF0-7c-PkQ" secondAttribute="leading" constant="10" id="qLh-Ax-r4m"/>
+                            <constraint firstItem="eKF-ak-H55" firstAttribute="leading" secondItem="EF0-7c-PkQ" secondAttribute="leading" constant="246" id="qLh-Ax-r4m"/>
                             <constraint firstItem="wQz-yg-jZw" firstAttribute="centerY" secondItem="EF0-7c-PkQ" secondAttribute="centerY" multiplier="0.63" id="qYc-Rp-vw9"/>
                             <constraint firstItem="GAM-kV-xKs" firstAttribute="top" secondItem="EF0-7c-PkQ" secondAttribute="top" constant="50" id="r9j-QI-Qmp"/>
                             <constraint firstItem="EF0-7c-PkQ" firstAttribute="trailing" secondItem="EUd-Df-Bk4" secondAttribute="trailing" constant="11" id="rLY-KN-Z2N"/>

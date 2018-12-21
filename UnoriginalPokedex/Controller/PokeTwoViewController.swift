@@ -11,6 +11,7 @@ import UIKit
 class PokeTwoViewController: UIViewController {
     var pokeData: NameURL?
     var pokeInfo: PokeInfo?
+    var pokeText: TextEntries?
     @IBOutlet weak var pokeName: UILabel!
     @IBOutlet weak var pokeImage: UIImageView!
     @IBOutlet weak var abilityOne: UILabel!
@@ -38,6 +39,7 @@ class PokeTwoViewController: UIViewController {
                 self.pokeInfo = data
                 var abilities = [String]()
                 DispatchQueue.main.async {
+                    self.pokeDexNum.text = "Pokedex # \(pokeNum)"
                     self.pokeName.text = self.pokeInfo?.name.capitalized
                     self.pokeInfo?.abilities.forEach{abilities.append($0.ability.name!)}
                     for i in 0..<abilities.count{
@@ -63,7 +65,18 @@ class PokeTwoViewController: UIViewController {
                         self.pokeImage.image = UIImage(named: "Pokeball-PNG-High-Quality-Image")
                     }
                 }
-                
+            }
+        }
+        PokemonDetailAPIClient.getPokeDetail(keyword: pokeNum) { (error, data) in
+            if let error = error {
+                print("Error Detail \(error)")
+            } else if let data = data {
+                self.pokeText = data
+                DispatchQueue.main.async {
+                    if let pokeText = self.pokeText {
+                        self.pokeDetail.text = pokeText.flavor_text
+                    }
+                }
             }
         }
     }
