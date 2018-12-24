@@ -9,7 +9,7 @@
 import Foundation
 
 struct PokeDetail: Codable {
-    let flavor_text_entries: [TextEntries]
+    var flavor_text_entries: [TextEntries]
 }
 struct TextEntries: Codable {
     let flavor_text: String

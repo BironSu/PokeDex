@@ -11,18 +11,19 @@ import UIKit
 class PokeTwoViewController: UIViewController {
     var pokeData: NameURL?
     var pokeInfo: PokeInfo?
-    var pokeText: TextEntries?
+    var pokeText: PokeDetail?
     @IBOutlet weak var pokeName: UILabel!
+    @IBOutlet weak var pokebackground: UIImageView!
     @IBOutlet weak var pokeImage: UIImageView!
     @IBOutlet weak var abilityOne: UILabel!
     @IBOutlet weak var abilityTwo: UILabel!
     @IBOutlet weak var abilityThree: UILabel!
     @IBOutlet weak var dismissButton: UIButton!
-    
     @IBOutlet weak var pokeBackground: UIImageView!
     @IBOutlet weak var pokeDetail: UITextView!
     @IBOutlet weak var pokeDexNum: UILabel!
-    
+    @IBOutlet var labels : Array<UILabel>?
+    @IBOutlet var abilityLabel : Array<UILabel>?
     override func viewDidLoad() {
         super.viewDidLoad()
         if let pokeData = pokeData {
@@ -39,7 +40,19 @@ class PokeTwoViewController: UIViewController {
                 self.pokeInfo = data
                 var abilities = [String]()
                 DispatchQueue.main.async {
+                    self.labels?.forEach {
+                        $0.layer.borderWidth = 2.0
+                        $0.layer.cornerRadius = 5.0
+                    }
+                    self.abilityLabel?.forEach {
+                        $0.layer.borderWidth = 1.0
+                        $0.layer.cornerRadius = 10.0
+                        $0.layer.backgroundColor = CGColor.
+                    }
+                    self.pokeDetail.layer.borderWidth = 2.0
+                    self.pokeDetail.layer.cornerRadius = 5.0
                     self.pokeDexNum.text = "Pokedex # \(pokeNum)"
+                    self.pokebackground.layer.borderWidth = 2.0
                     self.pokeName.text = self.pokeInfo?.name.capitalized
                     self.pokeInfo?.abilities.forEach{abilities.append($0.ability.name!)}
                     for i in 0..<abilities.count{
@@ -73,8 +86,9 @@ class PokeTwoViewController: UIViewController {
             } else if let data = data {
                 self.pokeText = data
                 DispatchQueue.main.async {
-                    if let pokeText = self.pokeText {
-                        self.pokeDetail.text = pokeText.flavor_text
+                    if var pokeText = self.pokeText {
+                        pokeText.flavor_text_entries = pokeText.flavor_text_entries.filter{$0.language.name.contains("en")}
+                        self.pokeDetail.text = pokeText.flavor_text_entries[0].flavor_text
                     }
                 }
             }

@@ -60,7 +60,7 @@ final class PokemonInfoAPIClient {
     }
 }
 final class PokemonDetailAPIClient {
-    static func getPokeDetail (keyword: String, completionHandler: @escaping(Error?, TextEntries?) -> Void) {
+    static func getPokeDetail (keyword: String, completionHandler: @escaping(Error?, PokeDetail?) -> Void) {
         let urlString = "https://pokeapi.co/api/v2/pokemon-species/\(keyword)/"
         
         guard let url = URL(string: urlString) else {
@@ -72,8 +72,7 @@ final class PokemonDetailAPIClient {
                 completionHandler(error, nil)
             } else if let data = data {
                 do {
-                    let pokeDetail = try JSONDecoder().decode(TextEntries.self, from: data)
-                    
+                    let pokeDetail = try JSONDecoder().decode(PokeDetail.self, from: data)
                     completionHandler(nil, pokeDetail)
                 } catch {
                     completionHandler(error, nil)
