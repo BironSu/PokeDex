@@ -13,6 +13,7 @@ struct PokeInfo: Codable {
     let id: Int
     let name: String
     let sprites: URLSprites
+    let types: [Types]
 }
 struct Ability: Codable {
     let ability: AbilityName
@@ -22,4 +23,11 @@ struct AbilityName: Codable {
 }
 struct URLSprites: Codable {
     let front_default: URL?
+}
+struct Types: Codable {
+    let type: Type
+    let slot: Int
+}
+struct Type: Codable{
+    let name: String
 }

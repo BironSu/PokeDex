@@ -29,16 +29,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pc4-JG-pe7">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="148.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="148.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Key-58-X2P">
-                                                    <rect key="frame" x="153.5" y="17.5" width="211.5" height="20"/>
+                                                    <rect key="frame" x="153.5" y="17.5" width="250.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaU-gj-2Oo">
-                                                    <rect key="frame" x="153.5" y="108" width="191.5" height="20"/>
+                                                    <rect key="frame" x="153.5" y="108" width="230.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -123,26 +123,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abilities" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUd-Df-Bk4">
-                                <rect key="frame" x="160.5" y="458.5" width="93.5" height="21.5"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type: Unknown" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5Q-GM-7zs">
+                                <rect key="frame" x="50" y="447.5" width="314" height="32"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUd-Df-Bk4">
+                                <rect key="frame" x="160.5" y="484.5" width="93.5" height="21.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Abilities">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="21" name="Copperplate"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Abilities" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBi-zg-BS1">
-                                <rect key="frame" x="11" y="485" width="392" height="17.5"/>
+                                <rect key="frame" x="11" y="511" width="392" height="17.5"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Second Ability" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deg-Ao-Dbv">
-                                <rect key="frame" x="11" y="507.5" width="392" height="17.5"/>
+                                <rect key="frame" x="11" y="533.5" width="392" height="17.5"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Third Ability" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRy-E1-44f">
-                                <rect key="frame" x="11" y="530" width="392" height="17.5"/>
+                                <rect key="frame" x="11" y="556" width="392" height="17.5"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -154,7 +170,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Pokemon Details Not Available" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BMM-uS-Yw0">
-                                <rect key="frame" x="45" y="570.5" width="324" height="246.5"/>
+                                <rect key="frame" x="45" y="596.5" width="324" height="220.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -178,10 +194,13 @@
                             <constraint firstItem="EF0-7c-PkQ" firstAttribute="trailing" secondItem="BMM-uS-Yw0" secondAttribute="trailing" constant="45" id="Adn-mg-UQz"/>
                             <constraint firstItem="cRy-E1-44f" firstAttribute="top" secondItem="deg-Ao-Dbv" secondAttribute="bottom" constant="5" id="Apo-Rl-QbG"/>
                             <constraint firstItem="deg-Ao-Dbv" firstAttribute="leading" secondItem="EF0-7c-PkQ" secondAttribute="leading" constant="11" id="CIq-mg-8Vh"/>
-                            <constraint firstItem="EUd-Df-Bk4" firstAttribute="top" secondItem="wQz-yg-jZw" secondAttribute="bottom" constant="21" id="Ikw-6U-YNQ"/>
+                            <constraint firstItem="EUd-Df-Bk4" firstAttribute="top" secondItem="wQz-yg-jZw" secondAttribute="bottom" constant="47" id="Ikw-6U-YNQ"/>
+                            <constraint firstItem="x5Q-GM-7zs" firstAttribute="leading" secondItem="EF0-7c-PkQ" secondAttribute="leading" constant="50" id="PVz-5G-B8x"/>
+                            <constraint firstItem="x5Q-GM-7zs" firstAttribute="top" secondItem="y8x-sK-b5P" secondAttribute="bottom" constant="10" id="RIs-Rm-fb4"/>
                             <constraint firstItem="lDJ-IL-Cn3" firstAttribute="centerX" secondItem="EF0-7c-PkQ" secondAttribute="centerX" id="Ra5-OM-qcd"/>
                             <constraint firstItem="FBi-zg-BS1" firstAttribute="trailing" secondItem="deg-Ao-Dbv" secondAttribute="trailing" id="UJX-8w-TM9"/>
                             <constraint firstItem="lDJ-IL-Cn3" firstAttribute="height" secondItem="coD-bx-h2R" secondAttribute="height" id="VjX-QX-Bqt"/>
+                            <constraint firstItem="EF0-7c-PkQ" firstAttribute="trailing" secondItem="x5Q-GM-7zs" secondAttribute="trailing" constant="50" id="Wmx-8p-Aoc"/>
                             <constraint firstItem="BMM-uS-Yw0" firstAttribute="leading" secondItem="EF0-7c-PkQ" secondAttribute="leading" constant="45" id="XtO-gK-ixv"/>
                             <constraint firstItem="EF0-7c-PkQ" firstAttribute="trailing" secondItem="eKF-ak-H55" secondAttribute="trailing" id="YRF-fS-vbK"/>
                             <constraint firstItem="FBi-zg-BS1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EF0-7c-PkQ" secondAttribute="leading" id="cg8-Yb-4fK"/>
@@ -189,6 +208,7 @@
                             <constraint firstItem="wQz-yg-jZw" firstAttribute="centerX" secondItem="EF0-7c-PkQ" secondAttribute="centerX" id="eqY-dj-Moc"/>
                             <constraint firstItem="y8x-sK-b5P" firstAttribute="centerX" secondItem="wQz-yg-jZw" secondAttribute="centerX" id="fhS-DO-xBX"/>
                             <constraint firstItem="wQz-yg-jZw" firstAttribute="height" secondItem="coD-bx-h2R" secondAttribute="height" multiplier="0.34" id="gJi-nt-Psc"/>
+                            <constraint firstItem="EUd-Df-Bk4" firstAttribute="top" secondItem="x5Q-GM-7zs" secondAttribute="bottom" constant="5" id="hUx-Zl-jc0"/>
                             <constraint firstItem="y8x-sK-b5P" firstAttribute="width" secondItem="wQz-yg-jZw" secondAttribute="width" id="kGH-yp-kNJ"/>
                             <constraint firstItem="lDJ-IL-Cn3" firstAttribute="width" secondItem="coD-bx-h2R" secondAttribute="width" id="kou-R1-zg0"/>
                             <constraint firstItem="wQz-yg-jZw" firstAttribute="width" secondItem="coD-bx-h2R" secondAttribute="width" multiplier="0.8" id="oAL-lS-quJ"/>
@@ -209,6 +229,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="GH9-RC-cBv"/>
                     <connections>
+                        <outlet property="ability" destination="EUd-Df-Bk4" id="Uns-Hc-gYF"/>
                         <outlet property="abilityOne" destination="FBi-zg-BS1" id="GFm-KZ-hUt"/>
                         <outlet property="abilityThree" destination="cRy-E1-44f" id="L6x-z1-xnk"/>
                         <outlet property="abilityTwo" destination="deg-Ao-Dbv" id="lIb-Yb-99h"/>
@@ -219,9 +240,9 @@
                         <outlet property="pokeImage" destination="wQz-yg-jZw" id="Mjl-zJ-qlA"/>
                         <outlet property="pokeName" destination="GAM-kV-xKs" id="I7l-LN-oML"/>
                         <outlet property="pokebackground" destination="y8x-sK-b5P" id="gU6-po-5hV"/>
+                        <outlet property="typeLabel" destination="x5Q-GM-7zs" id="jCI-s0-28c"/>
                         <outletCollection property="labels" destination="GAM-kV-xKs" collectionClass="NSMutableArray" id="HpR-7d-3R0"/>
                         <outletCollection property="labels" destination="eKF-ak-H55" collectionClass="NSMutableArray" id="6zN-0e-4Q2"/>
-                        <outletCollection property="abilityLabel" destination="EUd-Df-Bk4" collectionClass="NSMutableArray" id="qNL-80-kOZ"/>
                         <outletCollection property="abilityLabel" destination="FBi-zg-BS1" collectionClass="NSMutableArray" id="uR2-h3-NbT"/>
                         <outletCollection property="abilityLabel" destination="deg-Ao-Dbv" collectionClass="NSMutableArray" id="k27-47-EDM"/>
                         <outletCollection property="abilityLabel" destination="cRy-E1-44f" collectionClass="NSMutableArray" id="5ZG-gG-dcQ"/>

@@ -15,6 +15,7 @@ class PokeTwoViewController: UIViewController {
     @IBOutlet weak var pokeName: UILabel!
     @IBOutlet weak var pokebackground: UIImageView!
     @IBOutlet weak var pokeImage: UIImageView!
+    @IBOutlet weak var ability: UILabel!
     @IBOutlet weak var abilityOne: UILabel!
     @IBOutlet weak var abilityTwo: UILabel!
     @IBOutlet weak var abilityThree: UILabel!
@@ -22,6 +23,7 @@ class PokeTwoViewController: UIViewController {
     @IBOutlet weak var pokeBackground: UIImageView!
     @IBOutlet weak var pokeDetail: UITextView!
     @IBOutlet weak var pokeDexNum: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet var labels : Array<UILabel>?
     @IBOutlet var abilityLabel : Array<UILabel>?
     override func viewDidLoad() {
@@ -30,7 +32,6 @@ class PokeTwoViewController: UIViewController {
             getPokeInfo(data: pokeData)
         }
     }
-
     func getPokeInfo(data: NameURL) {
         let pokeNum = data.url.absoluteString.components(separatedBy: "/")[6]
         PokemonInfoAPIClient.getPokeInfo(keyword: pokeNum) { (error, data) in
@@ -40,15 +41,28 @@ class PokeTwoViewController: UIViewController {
                 self.pokeInfo = data
                 var abilities = [String]()
                 DispatchQueue.main.async {
+                    let layer = CAGradientLayer()
+                    layer.frame = self.view.bounds
+                    layer.colors = [UIColor.red.cgColor, UIColor.blue.cgColor, UIColor.green.cgColor]
+                    layer.startPoint = CGPoint(x:1,y:1)
+                    layer.startPoint = CGPoint(x:0.2,y:0.2)
+                    self.view.layer.insertSublayer(layer, at: 0)
+
                     self.labels?.forEach {
                         $0.layer.borderWidth = 2.0
                         $0.layer.cornerRadius = 5.0
                     }
                     self.abilityLabel?.forEach {
-                        $0.layer.borderWidth = 1.0
                         $0.layer.cornerRadius = 10.0
-                        $0.layer.backgroundColor = CGColor.
+                        $0.layer.masksToBounds = true
                     }
+                    var type = [String]()
+                    if let numTypes = self.pokeInfo?.types {
+                        for i in numTypes {
+                            type.append(i.type.name)
+                        }
+                    }
+                    self.typeLabel.text = "Type: \(type.joined(separator: "/").capitalized)"
                     self.pokeDetail.layer.borderWidth = 2.0
                     self.pokeDetail.layer.cornerRadius = 5.0
                     self.pokeDexNum.text = "Pokedex # \(pokeNum)"
@@ -94,7 +108,6 @@ class PokeTwoViewController: UIViewController {
             }
         }
     }
-    
     @IBAction func Dismiss(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
