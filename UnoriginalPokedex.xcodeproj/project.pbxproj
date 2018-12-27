@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		937C23C321CC87040059D484 /* PokeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C23C221CC87040059D484 /* PokeDetail.swift */; };
+		93ADF5C521D45FC200092DCB /* Exension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ADF5C421D45FC200092DCB /* Exension.swift */; };
 		93CCE3F421C5D5F400A753E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CCE3F321C5D5F400A753E6 /* AppDelegate.swift */; };
 		93CCE3F621C5D5F400A753E6 /* PokeOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CCE3F521C5D5F400A753E6 /* PokeOneViewController.swift */; };
 		93CCE3F921C5D5F400A753E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93CCE3F721C5D5F400A753E6 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		937C23C221CC87040059D484 /* PokeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeDetail.swift; sourceTree = "<group>"; };
+		93ADF5C421D45FC200092DCB /* Exension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exension.swift; sourceTree = "<group>"; };
 		93CCE3F021C5D5F400A753E6 /* UnoriginalPokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnoriginalPokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CCE3F321C5D5F400A753E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93CCE3F521C5D5F400A753E6 /* PokeOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeOneViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				93CCE40D21C5D8FF00A753E6 /* PokeList.swift */,
 				93CCE40F21C5D91100A753E6 /* PokeInfo.swift */,
+				93ADF5C421D45FC200092DCB /* Exension.swift */,
 				937C23C221CC87040059D484 /* PokeDetail.swift */,
 			);
 			path = Model;
@@ -209,6 +212,7 @@
 				93CCE3F621C5D5F400A753E6 /* PokeOneViewController.swift in Sources */,
 				93CCE3F421C5D5F400A753E6 /* AppDelegate.swift in Sources */,
 				93CCE46421C8499800A753E6 /* ImageHelper.swift in Sources */,
+				93ADF5C521D45FC200092DCB /* Exension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

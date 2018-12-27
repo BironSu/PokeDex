@@ -43,7 +43,8 @@ class PokeTwoViewController: UIViewController {
                 DispatchQueue.main.async {
                     let layer = CAGradientLayer()
                     layer.frame = self.view.bounds
-                    layer.colors = [UIColor.red.cgColor, UIColor.blue.cgColor, UIColor.green.cgColor]
+                    
+                    //layer.colors = [UIColor.fighting.cgColor , UIColor.fairy.cgColor]
                     layer.startPoint = CGPoint(x:1,y:1)
                     layer.startPoint = CGPoint(x:0.2,y:0.2)
                     self.view.layer.insertSublayer(layer, at: 0)
@@ -51,6 +52,7 @@ class PokeTwoViewController: UIViewController {
                     self.labels?.forEach {
                         $0.layer.borderWidth = 2.0
                         $0.layer.cornerRadius = 5.0
+                        $0.layer.masksToBounds = true
                     }
                     self.abilityLabel?.forEach {
                         $0.layer.cornerRadius = 10.0
@@ -62,12 +64,12 @@ class PokeTwoViewController: UIViewController {
                             type.append(i.type.name)
                         }
                     }
-                    self.typeLabel.text = "Type: \(type.joined(separator: "/").capitalized)"
+                    self.typeLabel.attributedText = NSMutableAttributedString(string: "Type: \(type.joined(separator: "/").capitalized)", attributes: self.outline(fontColor: .white))
                     self.pokeDetail.layer.borderWidth = 2.0
                     self.pokeDetail.layer.cornerRadius = 5.0
-                    self.pokeDexNum.text = "Pokedex # \(pokeNum)"
+                    self.pokeDexNum.attributedText = NSMutableAttributedString(string: "Pokedex # \(pokeNum)", attributes: self.outline(fontColor: .white))
                     self.pokebackground.layer.borderWidth = 2.0
-                    self.pokeName.text = self.pokeInfo?.name.capitalized
+                    self.pokeName.attributedText = NSMutableAttributedString(string: self.pokeInfo!.name.capitalized, attributes: self.outline(fontColor: .white))
                     self.pokeInfo?.abilities.forEach{abilities.append($0.ability.name!)}
                     for i in 0..<abilities.count{
                         if i == 0 {
@@ -80,7 +82,8 @@ class PokeTwoViewController: UIViewController {
                             self.abilityThree.text = abilities[i].capitalized
                         }
                     }
-                    if let url = self.pokeInfo?.sprites.front_default {
+                    //if let url = self.pokeInfo?.sprites.front_default {
+                    if let url = URL(string: "https://pokeres.bastionbot.org/images/pokemon/\(pokeNum).png") {
                         ImageHelper.fetchImage(urlString: url.absoluteString) { (error, image) in
                             if let error = error {
                                 print("Image Error: \(error)")
@@ -107,6 +110,13 @@ class PokeTwoViewController: UIViewController {
                 }
             }
         }
+    }
+    func outline(fontColor: UIColor) -> [NSAttributedString.Key: Any] {
+        return [
+            NSAttributedString.Key.strokeWidth : -2,
+            NSAttributedString.Key.foregroundColor : fontColor,
+            NSAttributedString.Key.strokeColor : UIColor.black
+        ]
     }
     @IBAction func Dismiss(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)

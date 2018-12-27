@@ -38,7 +38,6 @@ final class PokemonListAPIClient {
 final class PokemonInfoAPIClient {
     static func getPokeInfo(keyword: String, completionHandler: @escaping(Error?, PokeInfo?) -> Void) {
         let urlString = "https://pokeapi.co/api/v2/pokemon/\(keyword)/"
-        
         guard let url = URL(string: urlString) else {
             print("Bad URL: \(urlString)")
             return
