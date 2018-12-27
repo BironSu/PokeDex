@@ -48,7 +48,7 @@ class PokeTwoViewController: UIViewController {
                     layer.startPoint = CGPoint(x:1,y:1)
                     layer.startPoint = CGPoint(x:0.2,y:0.2)
                     self.view.layer.insertSublayer(layer, at: 0)
-
+                    
                     self.labels?.forEach {
                         $0.layer.borderWidth = 2.0
                         $0.layer.cornerRadius = 5.0
@@ -84,6 +84,14 @@ class PokeTwoViewController: UIViewController {
                     }
                     //if let url = self.pokeInfo?.sprites.front_default {
                     if let url = URL(string: "https://pokeres.bastionbot.org/images/pokemon/\(pokeNum).png") {
+                        ImageHelper.fetchImage(urlString: url.absoluteString) { (error, image) in
+                            if let error = error {
+                                print("Image Error: \(error)")
+                            } else if let image = image {
+                                self.pokeImage.image = image
+                            }
+                        }
+                    } else if let url = self.pokeInfo?.sprites.front_default {
                         ImageHelper.fetchImage(urlString: url.absoluteString) { (error, image) in
                             if let error = error {
                                 print("Image Error: \(error)")
