@@ -126,12 +126,14 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type: Unknown" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5Q-GM-7zs">
                                 <rect key="frame" x="50" y="447.5" width="314" height="32"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUd-Df-Bk4">
                                 <rect key="frame" x="160.5" y="484.5" width="93.5" height="21.5"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Abilities">
                                         <attributes>
@@ -166,6 +168,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKF-ak-H55">
                                 <rect key="frame" x="180" y="54" width="234" height="30"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -247,6 +250,8 @@
                         <outletCollection property="abilityLabel" destination="FBi-zg-BS1" collectionClass="NSMutableArray" id="uR2-h3-NbT"/>
                         <outletCollection property="abilityLabel" destination="deg-Ao-Dbv" collectionClass="NSMutableArray" id="k27-47-EDM"/>
                         <outletCollection property="abilityLabel" destination="cRy-E1-44f" collectionClass="NSMutableArray" id="5ZG-gG-dcQ"/>
+                        <outletCollection property="abilityLabel" destination="EUd-Df-Bk4" collectionClass="NSMutableArray" id="PVn-UC-Uws"/>
+                        <outletCollection property="abilityLabel" destination="x5Q-GM-7zs" collectionClass="NSMutableArray" id="RLy-yy-3Cm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXd-DH-YaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

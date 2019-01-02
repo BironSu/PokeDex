@@ -30,6 +30,7 @@ class PokeTwoViewController: UIViewController {
         super.viewDidLoad()
         if let pokeData = pokeData {
             getPokeInfo(data: pokeData)
+            
         }
     }
     func getPokeInfo(data: NameURL) {
@@ -39,7 +40,7 @@ class PokeTwoViewController: UIViewController {
                 print("Error PokeTwoVC \(error)")
             } else if let data = data {
                 self.pokeInfo = data
-                var abilities = [String]()
+                var abilities = [Int:String]()
                 DispatchQueue.main.async {
                     let layer = CAGradientLayer()
                     layer.frame = self.view.bounds
@@ -64,50 +65,59 @@ class PokeTwoViewController: UIViewController {
                             type.append(i.type.name)
                         }
                     }
-                    self.typeLabel.attributedText = NSMutableAttributedString(string: "Type: \(type.joined(separator: "/").capitalized)", attributes: self.outline(fontColor: .white))
+                    var typeArray = type.joined(separator: "/").capitalized
+//                    let attachment = NSTextAttachment()
+//                    attachment.image = UIImage(named: "Pokeball")
+//                    let imageOffsetY: CGFloat = -5.0
+//                    attachment.bounds = CGRect(x: 0, y: imageOffsetY, width: attachment.image!.size.width, height: attachment.image!.size.height)
+//
+//                    let attachedString = NSAttributedString(attachment: attachment)
+//                    let myString = NSMutableAttributedString(string: "test")
+//                    myString.append(attachedString)
+                    
+                    self.typeLabel.attributedText = NSMutableAttributedString(string: "Type: \(typeArray)", attributes: self.outline(fontColor: .white))
+//                    self.typeLabel.attributedText = myString
                     self.pokeDetail.layer.borderWidth = 2.0
                     self.pokeDetail.layer.cornerRadius = 5.0
                     self.pokeDexNum.attributedText = NSMutableAttributedString(string: "Pokedex # \(pokeNum)", attributes: self.outline(fontColor: .white))
                     self.pokebackground.layer.borderWidth = 2.0
                     self.pokeName.attributedText = NSMutableAttributedString(string: self.pokeInfo!.name.capitalized, attributes: self.outline(fontColor: .white))
-                    self.pokeInfo?.abilities.forEach{abilities.append($0.ability.name!)}
-                    for i in 0..<abilities.count{
-                        if i == 0 {
-                            self.abilityOne.text = abilities[i].capitalized
-                        }
-                        if i == 1 {
-                            self.abilityTwo.text = abilities[i].capitalized
-                        }
-                        if i == 3 {
-                            self.abilityThree.text = abilities[i].capitalized
-                        }
+                    self.pokeInfo?.abilities.forEach{abilities[$0.slot!] = ($0.ability.name!)}
+                    for i in abilities {
+                            if i.key == 1 {
+                                self.abilityOne.text = i.value.capitalized
+                            }
+                            if i.key == 2 {
+                                self.abilityTwo.text = i.value.capitalized
+                            }
+                            if i.key == 3 {
+                                self.abilityThree.text = i.value.capitalized
+                            }
                     }
                     //if let url = self.pokeInfo?.sprites.front_default {
                     if let url = URL(string: "https://pokeres.bastionbot.org/images/pokemon/\(pokeNum).png") {
-                        ImageHelper.fetchImage(urlString: url.absoluteString) { (error, image) in
-                            if let error = error {
-                                print("Image Error: \(error)")
+                        ImageHelper.shared.fetchImage(urlString: url.absoluteString) { (error, image) in
+                            if let _ = error {
+                                if let url = self.pokeInfo?.sprites.front_default {
+                                    ImageHelper.shared.fetchImage(urlString: url.absoluteString) { (error, image) in
+                                        if let error = error {
+                                            print("Image Error: \(error)")
+                                        } else if let image = image {
+                                            self.pokeImage.image = image
+                                        }
+                                    }
+                                }
                             } else if let image = image {
                                 self.pokeImage.image = image
                             }
                         }
-                    } else if let url = self.pokeInfo?.sprites.front_default {
-                        ImageHelper.fetchImage(urlString: url.absoluteString) { (error, image) in
-                            if let error = error {
-                                print("Image Error: \(error)")
-                            } else if let image = image {
-                                self.pokeImage.image = image
-                            }
-                        }
-                    } else {
-                        self.pokeImage.image = UIImage(named: "Pokeball-PNG-High-Quality-Image")
                     }
                 }
             }
         }
         PokemonDetailAPIClient.getPokeDetail(keyword: pokeNum) { (error, data) in
             if let error = error {
-                print("Error Detail \(error)")
+                print("Error \(error)")
             } else if let data = data {
                 self.pokeText = data
                 DispatchQueue.main.async {

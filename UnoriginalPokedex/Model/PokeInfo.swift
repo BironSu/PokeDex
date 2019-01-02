@@ -17,6 +17,8 @@ struct PokeInfo: Codable {
 }
 struct Ability: Codable {
     let ability: AbilityName
+    let slot: Int?
+
 }
 struct AbilityName: Codable {
     let name: String?

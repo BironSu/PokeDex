@@ -77,7 +77,7 @@ extension PokeOneViewController: UITableViewDelegate {
             } else if let pokeinfo = pokeinfo {
                 self.pokeInfo = pokeinfo
                 if let url = self.pokeInfo?.sprites.front_default {
-                    ImageHelper.fetchImage(urlString: url.absoluteString) { (error, image) in
+                    ImageHelper.shared.fetchImage(urlString: url.absoluteString) { (error, image) in
                         if let error = error {
                             print("Error at imageHelper \(error)")
                         } else if let image = image {
