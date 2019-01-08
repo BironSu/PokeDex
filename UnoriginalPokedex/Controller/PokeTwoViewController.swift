@@ -58,7 +58,7 @@ class PokeTwoViewController: UIViewController {
                         $0.layer.masksToBounds = true
                     }
                     let type = NSMutableAttributedString()
-                    type.append(NSMutableAttributedString(string: "Type :"))
+                    type.append(NSMutableAttributedString(string: "Type : "))
                     
                     if let numTypes = self.pokeInfo?.types {
                         for i in numTypes {
