@@ -63,7 +63,7 @@ class PokeTwoViewController: UIViewController {
                     if let numTypes = self.pokeInfo?.types {
                         for i in numTypes {
                             let attachment = NSTextAttachment()
-                            attachment.image = UIImage(named: "Pokeball")
+                            attachment.image = UIImage(named: "\(i.type.name.capitalized)")
                             attachment.bounds = CGRect(x: 0, y: -3, width: 15, height: 15)
                             let attachedString = NSAttributedString(attachment: attachment)
                             let myString = NSMutableAttributedString(string: i.type.name, attributes: self.outline(fontColor: .white))
