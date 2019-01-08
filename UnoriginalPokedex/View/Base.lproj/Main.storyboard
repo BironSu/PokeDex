@@ -110,6 +110,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textBackground" translatesAutoresizingMaskIntoConstraints="NO" id="afd-fJ-pa7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokemonBackground" translatesAutoresizingMaskIntoConstraints="NO" id="y8x-sK-b5P" userLabel="pokeImagebackground">
                                 <rect key="frame" x="41.5" y="133" width="331" height="304.5"/>
                             </imageView>
@@ -187,9 +190,13 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" image="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="BMM-uS-Yw0" firstAttribute="top" secondItem="cRy-E1-44f" secondAttribute="bottom" constant="23" id="0mE-pu-8GE"/>
                             <constraint firstItem="EF0-7c-PkQ" firstAttribute="trailing" secondItem="cRy-E1-44f" secondAttribute="trailing" constant="11" id="4vP-Pw-Jw8"/>
+                            <constraint firstItem="EF0-7c-PkQ" firstAttribute="trailing" secondItem="afd-fJ-pa7" secondAttribute="trailing" id="70g-xU-9Yg"/>
                             <constraint firstItem="lDJ-IL-Cn3" firstAttribute="centerY" secondItem="EF0-7c-PkQ" secondAttribute="centerY" id="79W-oE-J7h"/>
                             <constraint firstItem="eKF-ak-H55" firstAttribute="top" secondItem="EF0-7c-PkQ" secondAttribute="top" constant="10" id="9Au-7Y-fyL"/>
                             <constraint firstItem="EF0-7c-PkQ" firstAttribute="bottom" secondItem="BMM-uS-Yw0" secondAttribute="bottom" constant="45" id="9Os-ho-qjc"/>
@@ -224,7 +231,10 @@
                             <constraint firstItem="y8x-sK-b5P" firstAttribute="height" secondItem="wQz-yg-jZw" secondAttribute="height" id="rEi-zU-JCp"/>
                             <constraint firstItem="FBi-zg-BS1" firstAttribute="top" secondItem="EUd-Df-Bk4" secondAttribute="bottom" constant="5" id="tKz-jo-9CD"/>
                             <constraint firstItem="EUd-Df-Bk4" firstAttribute="centerX" secondItem="FBi-zg-BS1" secondAttribute="centerX" id="thB-dg-4oC"/>
+                            <constraint firstItem="afd-fJ-pa7" firstAttribute="leading" secondItem="EF0-7c-PkQ" secondAttribute="leading" id="w0s-i0-PUt"/>
+                            <constraint firstItem="EF0-7c-PkQ" firstAttribute="bottom" secondItem="afd-fJ-pa7" secondAttribute="bottom" id="wIy-ao-gDq"/>
                             <constraint firstItem="cRy-E1-44f" firstAttribute="leading" secondItem="EF0-7c-PkQ" secondAttribute="leading" constant="11" id="xa4-df-V97"/>
+                            <constraint firstItem="afd-fJ-pa7" firstAttribute="top" secondItem="EF0-7c-PkQ" secondAttribute="top" id="xdG-0L-FwU"/>
                             <constraint firstItem="EF0-7c-PkQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FBi-zg-BS1" secondAttribute="trailing" id="xmT-kO-GL7"/>
                             <constraint firstItem="GAM-kV-xKs" firstAttribute="leading" secondItem="EF0-7c-PkQ" secondAttribute="leading" constant="70" id="zrh-fr-8hA"/>
                             <constraint firstItem="EF0-7c-PkQ" firstAttribute="trailing" secondItem="deg-Ao-Dbv" secondAttribute="trailing" constant="11" id="zs1-2v-laJ"/>
@@ -261,5 +271,6 @@
     </scenes>
     <resources>
         <image name="pokemonBackground" width="800" height="480"/>
+        <image name="textBackground" width="444.72000122070312" height="55"/>
     </resources>
 </document>

@@ -10,6 +10,7 @@
 		937C23C321CC87040059D484 /* PokeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C23C221CC87040059D484 /* PokeDetail.swift */; };
 		93ADF5C521D45FC200092DCB /* Exension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ADF5C421D45FC200092DCB /* Exension.swift */; };
 		93ADF5C721D548B500092DCB /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ADF5C621D548B500092DCB /* AppError.swift */; };
+		93ADF5CD21DD6CB600092DCB /* ICON.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ADF5CC21DD6CB600092DCB /* ICON.png */; };
 		93CCE3F421C5D5F400A753E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CCE3F321C5D5F400A753E6 /* AppDelegate.swift */; };
 		93CCE3F621C5D5F400A753E6 /* PokeOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CCE3F521C5D5F400A753E6 /* PokeOneViewController.swift */; };
 		93CCE3F921C5D5F400A753E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93CCE3F721C5D5F400A753E6 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		937C23C221CC87040059D484 /* PokeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeDetail.swift; sourceTree = "<group>"; };
 		93ADF5C421D45FC200092DCB /* Exension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exension.swift; sourceTree = "<group>"; };
 		93ADF5C621D548B500092DCB /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		93ADF5CC21DD6CB600092DCB /* ICON.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ICON.png; path = ../../../../../Downloads/Images/Pokemon/ICON.png; sourceTree = "<group>"; };
 		93CCE3F021C5D5F400A753E6 /* UnoriginalPokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnoriginalPokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CCE3F321C5D5F400A753E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93CCE3F521C5D5F400A753E6 /* PokeOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeOneViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				93CCE43721C803FB00A753E6 /* NetworkServices */,
 				93CCE40521C5D60500A753E6 /* View */,
 				93CCE3FF21C5D5F600A753E6 /* Info.plist */,
+				93ADF5CC21DD6CB600092DCB /* ICON.png */,
 			);
 			path = UnoriginalPokedex;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93ADF5CD21DD6CB600092DCB /* ICON.png in Resources */,
 				93CCE3FE21C5D5F600A753E6 /* LaunchScreen.storyboard in Resources */,
 				93CCE3FB21C5D5F600A753E6 /* Assets.xcassets in Resources */,
 				93CCE3F921C5D5F400A753E6 /* Main.storyboard in Resources */,

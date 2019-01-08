@@ -44,8 +44,6 @@ class PokeTwoViewController: UIViewController {
                 DispatchQueue.main.async {
                     let layer = CAGradientLayer()
                     layer.frame = self.view.bounds
-                    
-                    //layer.colors = [UIColor.fighting.cgColor , UIColor.fairy.cgColor]
                     layer.startPoint = CGPoint(x:1,y:1)
                     layer.startPoint = CGPoint(x:0.2,y:0.2)
                     self.view.layer.insertSublayer(layer, at: 0)
@@ -59,24 +57,22 @@ class PokeTwoViewController: UIViewController {
                         $0.layer.cornerRadius = 10.0
                         $0.layer.masksToBounds = true
                     }
-                    var type = [String]()
+                    let type = NSMutableAttributedString()
+                    type.append(NSMutableAttributedString(string: "Type :"))
+                    
                     if let numTypes = self.pokeInfo?.types {
                         for i in numTypes {
-                            type.append(i.type.name)
+                            let attachment = NSTextAttachment()
+                            attachment.image = UIImage(named: "Pokeball")
+                            attachment.bounds = CGRect(x: 0, y: -3, width: 15, height: 15)
+                            let attachedString = NSAttributedString(attachment: attachment)
+                            let myString = NSMutableAttributedString(string: i.type.name, attributes: self.outline(fontColor: .white))
+                            myString.append(attachedString)
+                            type.append(myString)
                         }
                     }
-                    var typeArray = type.joined(separator: "/").capitalized
-//                    let attachment = NSTextAttachment()
-//                    attachment.image = UIImage(named: "Pokeball")
-//                    let imageOffsetY: CGFloat = -5.0
-//                    attachment.bounds = CGRect(x: 0, y: imageOffsetY, width: attachment.image!.size.width, height: attachment.image!.size.height)
-//
-//                    let attachedString = NSAttributedString(attachment: attachment)
-//                    let myString = NSMutableAttributedString(string: "test")
-//                    myString.append(attachedString)
                     
-                    self.typeLabel.attributedText = NSMutableAttributedString(string: "Type: \(typeArray)", attributes: self.outline(fontColor: .white))
-//                    self.typeLabel.attributedText = myString
+                    self.typeLabel.attributedText = type
                     self.pokeDetail.layer.borderWidth = 2.0
                     self.pokeDetail.layer.cornerRadius = 5.0
                     self.pokeDexNum.attributedText = NSMutableAttributedString(string: "Pokedex # \(pokeNum)", attributes: self.outline(fontColor: .white))
@@ -91,17 +87,18 @@ class PokeTwoViewController: UIViewController {
                                 self.abilityTwo.text = i.value.capitalized
                             }
                             if i.key == 3 {
-                                self.abilityThree.text = i.value.capitalized
+                                self.abilityThree.text = "Hidden Ability: \(i.value.capitalized)"
                             }
                     }
-                    //if let url = self.pokeInfo?.sprites.front_default {
                     if let url = URL(string: "https://pokeres.bastionbot.org/images/pokemon/\(pokeNum).png") {
                         ImageHelper.shared.fetchImage(urlString: url.absoluteString) { (error, image) in
                             if let _ = error {
                                 if let url = self.pokeInfo?.sprites.front_default {
                                     ImageHelper.shared.fetchImage(urlString: url.absoluteString) { (error, image) in
-                                        if let error = error {
-                                            print("Image Error: \(error)")
+                                        if let _ = error {
+                                            if let image = UIImage(named: "WhatPokeBall"){
+                                                self.pokeImage.image = image
+                                            }
                                         } else if let image = image {
                                             self.pokeImage.image = image
                                         }

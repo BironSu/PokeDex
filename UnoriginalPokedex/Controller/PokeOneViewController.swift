@@ -60,6 +60,7 @@ extension PokeOneViewController: UITableViewDataSource {
         cell.layer.cornerRadius = 10.0
         cell.clipsToBounds = true
         cell.layer.borderWidth = 6.0
+        
         return cell
     }
 }
@@ -82,9 +83,19 @@ extension PokeOneViewController: UITableViewDelegate {
                             print("Error at imageHelper \(error)")
                         } else if let image = image {
                             cell.pokeImageView.image = image
+                            
                             Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.pokeSegue), userInfo: pokemon, repeats: false)
                         }
                     }
+                } else {
+                    DispatchQueue.main.async {
+                        if let image = UIImage(named: "WhatPokeBall") {
+                            cell.pokeImageView.image = image
+                            Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.pokeSegue), userInfo: pokemon, repeats: false)
+                        }
+                    }
+                    
+                    
                 }
             }
         }
