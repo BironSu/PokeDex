@@ -1,5 +1,5 @@
 # PokéDex
-Need to learn a bit about a Pokémon anytime you want? This Pokédex can help!
+Want to learn a bit more about a Pokémon you want at any given time? This Pokédex can help!
 ## Overview
 One of the first projects I have made using a Pokémon API. The Pokédex displays the Pokémon's name, picture, Pokédex number, type, two abilities + hidden ability (if available) and a description of the Pokémon.
 ## Features
