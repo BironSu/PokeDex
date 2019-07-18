@@ -9,9 +9,11 @@ One of the first projects I have made using a Pokémon API. The Pokédex display
    * The detail page has a more detailed image of the Pokémon as well as more information.
 ## Navigating through the Pokédex
 ![](gifs/PokedexGifIntro.gif)
+
 Users can browse drag up or down through the tableview of Pokémons.
 ## Searching through Pokémons
 ![](gifs/PokedexSearch.gif)
+
 Users can use the search bar to find the exact Pokémon they want.
 ## Built With
  * Swift 4
