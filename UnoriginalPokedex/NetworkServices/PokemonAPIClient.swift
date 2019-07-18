@@ -10,7 +10,7 @@ import Foundation
 
 final class PokemonListAPIClient {
     static func searchPokemon(keyword: String, completionHandler: @escaping(Error?, [NameURL]? ) -> Void ) {
-        let urlString = "https://pokeapi.co/api/v2/pokemon"
+        let urlString = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=200"
         guard let url = URL(string: urlString) else {
             print("Bad URL: \(urlString)")
             return
