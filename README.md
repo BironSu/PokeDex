@@ -1,3 +1,3 @@
 # PokeDex
-![](Pokedex gifs/PokedexGifIntro.gif)
-![](Pokedex gifs/PokdexSearch.gif)
+![](UnoriginalPokedex/Pokedex gifs/PokedexGifIntro.gif)
+![](UnoriginalPokedex/Pokedex gifs/PokdexSearch.gif)
